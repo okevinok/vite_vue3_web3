@@ -9,14 +9,6 @@ export default {
       util: 'util'
     }
   },
-  resolve: {
-    alias: {
-      process: "process/browser",
-      stream: "stream-browserify",
-      zlib: "browserify-zlib",
-      util: 'util'
-    }
-  },
   plugins: [
     vue(),
   ]
