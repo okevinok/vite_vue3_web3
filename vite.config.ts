@@ -10,30 +10,15 @@ import globals from 'rollup-plugin-node-globals';
 // builtinsPlugin.name = 'builtins';
 
 export default {
-  define: {
-    'process.env': process.env
+  resolve: {
+    alias: {
+      process: "process/browser",
+      stream: "stream-browserify",
+      zlib: "browserify-zlib",
+      util: 'util'
+    }
   },
   plugins: [
-    globals(),
     vue(),
-    nodePolyfills(),
-
-  //   builtinsPlugin
-  //   NodeGlobalsPolyfillPlugin({
-  //     process: true,
-  //     buffer: true,
-  //     define: { 'process.env.NODE_ENV': '"production"' }, // https://github.com/evanw/esbuild/issues/660
-  // }),
-  ],
-  optimizeDeps: { 
-    // exclude: ['web3']
-    include:['web3']
-  },
-  build: {
-    rollupOptions: {
-      plugins: [
-        // nodePolyfills()
-        ],
-    },
-  },
+  ]
 }
