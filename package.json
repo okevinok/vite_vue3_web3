@@ -3,18 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --force",
-    "build": "vite build"
+    "build": "vite build",
+    "serve": "vite serve"
   },
   "dependencies": {
-    "@esbuild-plugins/node-globals-polyfill": "^0.1.0",
-    "@esbuild-plugins/node-modules-polyfill": "^0.1.1",
     "@metamask/detect-provider": "^1.2.0",
-    "@rollup/plugin-commonjs": "^19.0.0",
-    "Buffer": "0.0.0",
     "browserify-zlib": "^0.2.0",
-    "rollup-plugin-node-globals": "^1.4.0",
+    "events": "^3.3.0",
+    "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
-    "vite-plugin-package-version": "^1.0.2",
+    "util": "^0.12.4",
     "vue": "^3.0.4",
     "web3": "^1.3.6",
     "web3-eth-contract": "^1.3.0"
@@ -23,8 +21,6 @@
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.4",
     "buffer": "^6.0.3",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-polyfill-node": "^0.6.2",
     "vite": "^2.1.5"
   }
 }
